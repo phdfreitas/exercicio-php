@@ -54,6 +54,8 @@
                             $hg = file_get_contents("https://dev.kidopilabs.com.br/exercicio/covid.php?pais=".$_GET['pais']);
                             $json = json_decode($hg);
 
+                            include_once 'service.php';
+
                             foreach($json as $key => $dados):
                     ?>
                         <tr>
