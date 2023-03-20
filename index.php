@@ -36,7 +36,7 @@
         
         <div class="row">
             <h1 class="titulo">
-                Informações sobre <?php echo $_GET['pais']; ?>
+                Informações sobre <span>País</span>
             </h1>
             <table class="table">
                 <thead>
@@ -53,10 +53,13 @@
                         if (isset($_GET['pais'])):
                             $hg = file_get_contents("https://dev.kidopilabs.com.br/exercicio/covid.php?pais=".$_GET['pais']);
                             $json = json_decode($hg);
-
+                            $totalConfirmados = 0;
+                            $totalMortos = 0;
                             include_once 'service.php';
 
                             foreach($json as $key => $dados):
+                            $totalConfirmados += $dados->Confirmados;
+                            $totalMortos += $dados->Mortos;
                     ?>
                         <tr>
                             <th scope="row">
@@ -76,9 +79,23 @@
                         endforeach;
                         endif;
                     ?>
+                    <p>
+                        Total de confirmados: <?= htmlspecialchars($totalConfirmados); ?>
+                        Total de mortes <?= htmlspecialchars($totalMortos); ?>
+                    </p>
                 </tbody>
             </table>
         </div>
+
+        <footer>
+            <div class="row">
+                <p>
+                    <?php
+                        include_once 'service-select.php';
+                    ?>
+                </p>
+            </div>
+        </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
 </body>
