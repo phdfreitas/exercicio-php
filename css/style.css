@@ -1,20 +1,114 @@
+/*Animacao*/
+@keyframes spin{
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+      transform: rotate(360deg);
+    }
+}
+
+/**/
+/*Primeiro painel Home*/
+#main{
+    width: 1500px;
+}
+
+#principal{
+    font-family: 'Kanit', sans-serif;
+}
+
+#principalPrimeiraDiv1{
+    width: 850px;
+    margin-left: 55px;
+    float: left;
+    height: 400px;
+}
+  
+#principalPrimeiraDiv1 h1, h3{
+  text-align: justify;
+  font-family: 'Kanit', sans-serif;
+  color: #021f67;
+}
+
+#principalPrimeiraDiv1 h1{
+  margin-top: 100px;
+  margin-left: 55px;
+  font-size: 3.5em;
+  font-weight: 600;
+}
+
+#principalPrimeiraDiv1 h3{
+  margin-top: 50px;
+  margin-left: 60px;
+  font-size: 1.4em;
+  width: 620px;
+}
+
+#principalSegundaDiv{
+    width: 400px;
+    float: right;
+    margin-right: 100px;
+    margin-top: 60px;
+}
+
+#imagens{
+  width: 450px;
+  animation: spin 40s linear infinite;
+}
+  /**/
+
+#divInteracaoUsuario{
+    clear: both;
+}
+
 #formulario{
     width: 100%;
     height: 100%;
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 0 10px #000;
+    box-shadow: 0 0 5px #000;
     margin: 0 auto;
     margin-top: 100px;
     margin-bottom: 20px;
     text-align: center;
 }
 
+#dadosCovid{
+    text-align: center;
+}
+
 #informacao{
-    border: 1px solid blue;
     width: 100%;
     height: 100%;
     text-align: center;
-    padding: 50px 0;
+    padding: 15px 0;
+}
+
+#divInformacoes{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+#informacoesExtras{
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.button {
+    margin-top: 15px;
+}
+
+.textoInfoExtras{
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+footer{
+    text-align: center;
+    margin-top: 20px;
 }

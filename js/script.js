@@ -11,6 +11,8 @@ const alteraNomePais = (nomePais) => {
     else if(nomePais === "Canada"){
         return "Canadá";
     }
+
+    return nomePais;
 }
 
 if (url.length === 1) {
