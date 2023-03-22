@@ -122,6 +122,12 @@
                 </tbody>
             </table>
         </div>
+        
+        <div>
+            <?php
+                include_once 'taxaPaises.php';
+            ?>
+        </div>
 
         <footer>
             <div class="row">
