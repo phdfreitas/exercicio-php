@@ -1,7 +1,8 @@
 let url = window.location.href.split('?');
-console.log(url[1].length)
+console.log(url.length)
 
 let dadosCovid = document.getElementById('dadosCovid');
+let divInformacao = document.getElementById('divInformacoes');
 let informacao = document.getElementById('informacao');
 let paisInformacao = document.getElementById('paisInformacao');
 
@@ -17,10 +18,12 @@ const alteraNomePais = (nomePais) => {
 }
 
 if (url.length === 1) {
-    dadosCovid.hidden = true;
-    informacao.innerHTML = 'Nenhum país foi selecionado';
+    divInformacao.hidden = true;
 }
-else if(url[1].length >= 1 && url[1].length <= 14){
+if(url[1].length >= 1 && url[1].length <= 14){
+    console.log("entrou aqui")
     paisInformacao.innerHTML = alteraNomePais(url[1].substring(5));
+}else{
+    divInformacao.hidden = true;
 }
 

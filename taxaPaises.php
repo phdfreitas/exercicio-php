@@ -9,37 +9,42 @@ $json = json_decode($hg);
 <div id="comparacao">
     
     <div id="tituloComparacao">
-        <h1>Compare os dados de dois países</h1>
+        <h1>Faça a comparação entre dois países</h1>
     </div>
     
-    <form>
-        <select name="pais1">
-            <option value="#">Selecione o Primeiro País</option>
-            <?php
-                foreach ($json as $key => $value):
-            ?>
-                <option value="<?= htmlspecialchars($value); ?>">
-                    <?= htmlspecialchars($value); ?>
-                </option>
-            <?php
-                endforeach;
-            ?>
-        </select>
+    <div class="formulario">
+        <form>
+            <select name="pais1">
+                <option value="#">Selecione o Primeiro País</option>
+                <?php
+                    foreach ($json as $key => $value):
+                ?>
+                    <option value="<?= htmlspecialchars($value); ?>">
+                        <?= htmlspecialchars($value); ?>
+                    </option>
+                <?php
+                    endforeach;
+                ?>
+            </select>
 
-        <select name="pais2">
-            <option value="#">Selecione o Segundo País</option>
-            <?php
-                foreach ($json as $key => $value):
-            ?>
-                <option value="<?= htmlspecialchars($value); ?>">
-                    <?= htmlspecialchars($value); ?>
-                </option>
-            <?php
-                endforeach;
-            ?>
-        </select>
-        <input type="submit" value="Enviar">
-    </form>
+            <select name="pais2">
+                <option value="#">Selecione o Segundo País</option>
+                <?php
+                    foreach ($json as $key => $value):
+                ?>
+                    <option value="<?= htmlspecialchars($value); ?>">
+                        <?= htmlspecialchars($value); ?>
+                    </option>
+                <?php
+                    endforeach;
+                ?>
+            </select>
+                    
+            <div class="button">
+                <button class="btn btn-warning">Comparar</button>
+            </div>
+        </form>
+    </div>
 
     <?php
 
@@ -70,35 +75,38 @@ $json = json_decode($hg);
         $diferencaTaxaMorte = $taxaMortePais1 - $taxaMortePais2;
     ?>
 
-        <div>
-            <h1>Resultado</h1>
-            <table class="table table-striped" id="dadosCovid">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col"><?= htmlspecialchars($_GET['pais1']); ?></th>
-                            <th scope="col"><?= htmlspecialchars($_GET['pais2']); ?></th>
-                            <th scope="col">Diferença Taxa de Morte</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">
-                                Taxa de Morte
-                            </th>
-                            <td>
-                                <?= htmlspecialchars($taxaMortePais1); ?>
-                            </td>
-                            <td>
-                                <?= htmlspecialchars($taxaMortePais2); ?>
-                            </td>
-                            <td>
-                                <?= htmlspecialchars($diferencaTaxaMorte); ?>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-        </div>
+    <div>
+        <table class="table" id="dadosCovid">
+            <thead>
+                <tr class="table-info">
+                    <th scope="col">#</th>
+                    <th scope="col"><?= htmlspecialchars($_GET['pais1']); ?></th>
+                    <th scope="col"><?= htmlspecialchars($_GET['pais2']); ?></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">
+                        Taxa de Morte
+                    </th>
+                    <td>
+                        <?= htmlspecialchars($taxaMortePais1); ?>
+                    </td>
+                    <td>
+                        <?= htmlspecialchars($taxaMortePais2); ?>
+                    </td>
+                </tr>
+                <tr sc>
+                    <th scope="row">
+                        Diferença de Taxa de Morte
+                    </th>
+                    <td colspan="2">
+                        <?= htmlspecialchars($diferencaTaxaMorte); ?>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
     <?php
         endif;

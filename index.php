@@ -34,9 +34,9 @@
                 </h1>
             </div>
 
-            <div class="row" id="formulario">
+            <div class="formulario" id="formBrCaAus">
                 <p>Selecione o país que você quer verificar os dados.</p>
-                <form>
+                <form id="form1">
                     <label for="pais">
                         <input type="radio" name="pais" id="brasil" class="pais-info1" value="Brazil">
                         Brasil
@@ -105,7 +105,7 @@
                         ?>
                         <div id="informacoesExtras">
                             <span>
-                                <span class="textoInfoExtras">Casos confirmados:</span> 
+                                <span class="textoInfoExtras">Total de casos confirmados:</span> 
                                 <span class="infoDados">
                                     <?=isset($_GET['pais']) ? htmlspecialchars($totalConfirmados) : 0; ?>
                                 </span>
@@ -118,29 +118,29 @@
                                     <?= isset($_GET['pais']) ? htmlspecialchars($totalMortos) : 0; ?>
                                 </span>
                             </span>
-                            
-                            
                         </div>
                     </tbody>
                 </table>
             </div>
-            
-            <div>
-                <?php
-                    include_once 'taxaPaises.php';
-                ?>
-            </div>
         </div>
+    </div>
+    
+    <div class="container">
+        <?php
+            include_once 'taxaPaises.php';
+        ?>
+    </div>
 
-        <footer>
-            <div class="row">
-                <p>
-                    <?php
-                        include_once 'service-select.php';
-                    ?>
-                </p>
-            </div>
-        </footer>
+    <footer>
+        <div>
+            <p>
+                <?php
+                    include_once 'service-select.php';
+                ?>
+            </p>
+        </div>
+    </footer>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
