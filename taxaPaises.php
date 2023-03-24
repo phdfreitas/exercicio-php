@@ -49,12 +49,16 @@ $json = json_decode($hg);
     <?php
 
     if (isset($_GET['pais1']) && isset($_GET['pais2'])):
-        $hgPais1 = file_get_contents("https://dev.kidopilabs.com.br/exercicio/covid.php?pais=".$_GET['pais1']);
+        
+        $nomePais1 = str_replace(" ", "%20", $_GET['pais1']);
+        $nomePais2 = str_replace(" ", "%20", $_GET['pais2']);
+
+        $hgPais1 = file_get_contents("https://dev.kidopilabs.com.br/exercicio/covid.php?pais=".$nomePais1);
         $jsonPais1 = json_decode($hgPais1);
         $totalConfirmadosPais1 = 0;
         $totalMortosPais1 = 0;
 
-        $hgPais2 = file_get_contents("https://dev.kidopilabs.com.br/exercicio/covid.php?pais=".$_GET['pais2']);
+        $hgPais2 = file_get_contents("https://dev.kidopilabs.com.br/exercicio/covid.php?pais=".$nomePais2);
         $jsonPais2 = json_decode($hgPais2);
         $totalConfirmadosPais2 = 0;
         $totalMortosPais2 = 0;
