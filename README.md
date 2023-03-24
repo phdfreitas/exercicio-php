@@ -17,7 +17,7 @@ Deve ser armazenado no MySql a data e hora de quando a API foi acessada e també
 SELECT country, DATE_FORMAT(moment, '%d/%m/%Y %H:%i:%s') as moment 
             FROM api_call WHERE id = (SELECT count(id) from api_call);
 ```
-**-Explicação**
+- **Explicação**
     1. Considerando que assim que a chamada a API é feita o país escolhido e o horário da chamada são salvos no banco de dados, então *o último acesso* no banco será sempre **o de maior id**. (Para essa solução)  
     2. A função **DATE_FORMAT** foi usada apenas para formatar a data e a hora para exibição em formato brasileiro.
 
