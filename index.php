@@ -12,20 +12,24 @@
 </head>
 <body>
     <div id="principal">
-        <div class="col">
+        <div>
             <div id="principalPrimeiraDiv">
                 <div id='principalPrimeiraDiv1'>
-                    <h1>Covid 19</h1>
+                    <h1>Covid-19</h1>
                     <h3>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Harum et quas officia neque nihil cupiditate at provident enim a quibusdam! 
+                        Verifique as informações sobre a pandemia de Covid-19 em países ao redor do mundo.
                     </h3>
                 </div>
             </div>
         </div>
+        <div id="principalSegundaDiv">
+            <div id="imagens">
+                <img id="imgCovid1" src="https://unidos.fiocruz.br/assets/images/about/about-img.png" alt="covid">
+            </div>
+        </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="clear">
         
         <div id="interacao">
             <div id="tituloInteracao">
@@ -35,7 +39,7 @@
             </div>
 
             <div class="formulario" id="formBrCaAus">
-                <p>Selecione o país que você quer verificar os dados.</p>
+                <p>Selecione um dos países para verificar os dados.</p>
                 <form id="form1">
                     <label for="pais">
                         <input type="radio" name="pais" id="brasil" class="pais-info1" value="Brazil">

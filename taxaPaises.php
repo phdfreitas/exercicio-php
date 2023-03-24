@@ -41,7 +41,7 @@ $json = json_decode($hg);
             </select>
                     
             <div class="button">
-                <button class="btn btn-warning">Comparar</button>
+                <button class="btn btn-primary">Comparar</button>
             </div>
         </form>
     </div>
@@ -69,8 +69,8 @@ $json = json_decode($hg);
             $totalMortosPais2 += $dados->Mortos;
         }
 
-        $taxaMortePais1 = ($totalMortosPais1 / $totalConfirmadosPais1) * 100;
-        $taxaMortePais2 = ($totalMortosPais2 / $totalConfirmadosPais2) * 100;
+        $taxaMortePais1 = number_format(($totalMortosPais1 * 1000 / $totalConfirmadosPais1), 3);
+        $taxaMortePais2 = number_format(($totalMortosPais2 * 1000 / $totalConfirmadosPais2), 3);
 
         $diferencaTaxaMorte = $taxaMortePais1 - $taxaMortePais2;
     ?>
@@ -87,21 +87,21 @@ $json = json_decode($hg);
             <tbody>
                 <tr>
                     <th scope="row">
-                        Taxa de Morte
+                        Taxa de Mortalidade
                     </th>
                     <td>
-                        <?= htmlspecialchars($taxaMortePais1); ?>
+                        <?= htmlspecialchars($taxaMortePais1); ?> %
                     </td>
                     <td>
-                        <?= htmlspecialchars($taxaMortePais2); ?>
+                        <?= htmlspecialchars($taxaMortePais2); ?> %
                     </td>
                 </tr>
                 <tr sc>
                     <th scope="row">
-                        Diferença de Taxa de Morte
+                        Diferença de Taxa de Mortalidade
                     </th>
                     <td colspan="2">
-                        <?= htmlspecialchars($diferencaTaxaMorte); ?>
+                        <?= htmlspecialchars($diferencaTaxaMorte); ?> %
                     </td>
                 </tr>
             </tbody>

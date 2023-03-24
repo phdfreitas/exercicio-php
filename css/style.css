@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+
 /*Animacao*/
 @keyframes spin{
     from{
@@ -12,15 +15,21 @@
 /*Primeiro painel Home*/
 
 #principal{
-    font-family: 'Kanit', sans-serif;
-    background-color: #ccc;
+  font-family: 'Kanit', sans-serif;
+  background-color: rgb(74, 136, 164);
+  overflow: hidden;
+}
+
+#principalPrimeiraDiv{
+    width: 1000px;
+    float: left;
+    background-image: url("https://unicarechc.org/wp-content/uploads/2020/11/banner4.jpg");
 }
 
 #principalPrimeiraDiv1{
     width: 850px;
     margin-left: 55px;
     height: 400px;
-    background-color: aliceblue;
 }
   
 #principalPrimeiraDiv1 h1, h3{
@@ -28,28 +37,41 @@
 }
 
 #principalPrimeiraDiv1 h1{
-  padding-top: 100px;
-  margin-left: 55px;
-  font-size: 3.5em;
-  font-weight: 600;
+  padding-top: 90px;
+  margin-left: 60px;
+  font-size: 4.5em;
+  font-family: 'Roboto Slab', serif;
+  color: #fff;
+  text-decoration: underline;
 }
 
 #principalPrimeiraDiv1 h3{
-  margin-top: 50px;
+  margin-top: 15px;
   margin-left: 60px;
   font-size: 1.4em;
   width: 620px;
+  color: #fff;
+  font-weight: 600;
 }
 
 #principalSegundaDiv{
     width: 400px;
     margin-right: 100px;
     margin-top: 60px;
+    float: right;
 }
 
 #imagens{
-  width: 450px;
   animation: spin 40s linear infinite;
+}
+
+#imgCovid1{
+  width: 350px;
+}
+
+#clear{
+  clear: both;
+  overflow: hidden;
 }
   /**/
 
@@ -57,6 +79,10 @@
   border: 1px solid black;
   width: 500px;
   margin-top: 30px;
+}
+
+#formBrCaAus p {
+  font-weight: 600;
 }
 
 .titulo{
@@ -78,6 +104,7 @@
     font-weight: 600;
     padding: 15px;
     border-bottom: 1px solid #ccc;
+    font-family: 'Quicksand', sans-serif;
 }
 
 #divTaxaPaises{
@@ -107,6 +134,7 @@
     height: 100%;
     text-align: center;
     padding: 25px 0;
+    font-family: 'Quicksand', sans-serif;
 }
 
 #divInformacoes{
@@ -142,12 +170,20 @@
   font-size: 2em;
   font-weight: 600;
   padding: 15px;
+  font-family: 'Quicksand', sans-serif;
   border-bottom: 1px solid #ccc;
 }
 
 footer{
-    text-align: center;
-    margin-top: 20px;
+  background-color: #f5f5f5;
+  margin-top: 25px;
+  padding-top: 15px;
+  padding-bottom: 1px;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 600;
+  font-family: 'Quicksand', sans-serif;
+  margin-bottom: -15px;
 }
 
 select{
