@@ -7,7 +7,7 @@ O desafio consiste em construir um sistema que possibilite ao usuário obter inf
 
 ## Interface
 <p align="center">
-	<img src="./public/home.png">
+	<img src="/public/home.png">
 </p>
 
 ### Parte 1 - Chamada a API e Exibição dos Dados
