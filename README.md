@@ -5,11 +5,6 @@
 ## Desafio
 O desafio consiste em construir um sistema que possibilite ao usuário obter informações sobre os casos de morte por Covid. Os dados foram obtidos a partir de uma API disponibilizada pela Kidopi. A API fornece o número de casos de covid confirmados e o número de mortes de vários países. O desafio/exercício foi dividido em 3 partes obrigatórias e 1 parte extra opcional.
 
-## Interface
-<p align="center">
-	<img src="/public/home.png">
-</p>
-
 ### Parte 1 - Chamada a API e Exibição dos Dados
 Nessa parte o usuário deve conseguir visualizar os dados de um país que ele escolher, nesse caso, as opções de países são: Brasil, Canadá ou Australia. Na minha solução, optei por mostrar os dados de Covid em uma tabela para que ficasse mais 'clean'. 
 
@@ -51,6 +46,11 @@ $taxaMortePais1 = number_format(($totalMortosPais1 * 1000 / $totalConfirmadosPai
 $taxaMortePais2 = number_format(($totalMortosPais2 * 1000 / $totalConfirmadosPais2), 3);
 ```
 Nesse caso, multiplico o número total de mortes de cada país por 1000 apenas para ter como resultado um número melhor de exibido. No entanto, obviamente não altera o resultado final. 
+
+### Interface
+<p align="center">
+	<img src="public/home.png">
+</p>
 
 ### Banco de Dados
 Segue o script para a criação do banco de dados e tabela
