@@ -70,4 +70,5 @@ CREATE TABLE api_call (
 2. Para conseguir executar o backend + banco de dados sem problemas só é preciso copiar o script do banco deixado acima e executar o mesmo no mysql. 
 3. Quando o banco de dados estiver vazio nenhuma informação é exibida no rodapé da página
 4. Apenas as chamadas simples são salvas no banco de dados, ou seja, as chamadas para API envolvendo a comparação da taxa de morte entre dois países não vai para o banco de dados. 
-5. Altera as configurações de acesso ao banco de dados no arquivo **db.sql** para as configurações do seu banco de dados local. 
+5. Altere as configurações de acesso ao banco de dados no arquivo **db.sql** para as configurações do seu banco de dados local.
+6. É possível que os nomes de arquivos e variáveis não sejam os mais indicados (e nem estejam no padrão ideal) para uma aplicação desenvolvida em equipe e que irá para produção.  
