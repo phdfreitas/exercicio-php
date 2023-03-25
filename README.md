@@ -1,5 +1,7 @@
 # Kidopi - Exercício PHP
 
+![alt](https://www.skyhub.bio/wp-content/uploads/2021/09/kidopi.png)
+
 ## Desafio
 O desafio consiste em construir um sistema que possibilite ao usuário obter informações sobre os casos de morte por Covid. Os dados foram obtidos a partir de uma API disponibilizada pela Kidopi. A API fornece o número de casos de covid confirmados e o número de mortes de vários países. O desafio/exercício foi dividido em 3 partes obrigatórias e 1 parte extra opcional.
 
@@ -45,4 +47,15 @@ $taxaMortePais2 = number_format(($totalMortosPais2 * 1000 / $totalConfirmadosPai
 ```
 Nesse caso, multiplico o número total de mortes de cada país por 1000 apenas para ter como resultado um número melhor de exibido. No entanto, obviamente não altera o resultado final. 
 
-## Explicar sobre o BD, sobre a interface e sobre os códigos 
+### Banco de Dados
+Segue o script para a criação do banco de dados e tabela
+
+```
+CREATE database desafio_php;
+
+CREATE TABLE api_call (
+	id int not null auto_increment primary key,
+    country varchar(15) not null,
+    moment timestamp default current_timestamp
+);
+```
