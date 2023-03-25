@@ -1,9 +1,14 @@
-# Kidopi - Exercício PHP
-
-![alt](https://www.skyhub.bio/wp-content/uploads/2021/09/kidopi.png)
+<p align="center">
+	<img src="https://www.skyhub.bio/wp-content/uploads/2021/09/kidopi.png">
+</p>
 
 ## Desafio
 O desafio consiste em construir um sistema que possibilite ao usuário obter informações sobre os casos de morte por Covid. Os dados foram obtidos a partir de uma API disponibilizada pela Kidopi. A API fornece o número de casos de covid confirmados e o número de mortes de vários países. O desafio/exercício foi dividido em 3 partes obrigatórias e 1 parte extra opcional.
+
+## Interface
+<p align="center">
+	<img src="./public/home.png">
+</p>
 
 ### Parte 1 - Chamada a API e Exibição dos Dados
 Nessa parte o usuário deve conseguir visualizar os dados de um país que ele escolher, nesse caso, as opções de países são: Brasil, Canadá ou Australia. Na minha solução, optei por mostrar os dados de Covid em uma tabela para que ficasse mais 'clean'. 
