@@ -64,3 +64,10 @@ CREATE TABLE api_call (
     moment timestamp default current_timestamp
 );
 ```
+
+### Comentários adicionais
+1. A ideia da interface era ser o mais clean possível, mas sem ser desconfortável para o usuário. 
+2. Para conseguir executar o backend + banco de dados sem problemas só é preciso copiar o script do banco deixado acima e executar o mesmo no mysql. 
+3. Quando o banco de dados estiver vazio nenhuma informação é exibida no rodapé da página
+4. Apenas as chamadas simples são salvas no banco de dados, ou seja, as chamadas para API envolvendo a comparação da taxa de morte entre dois países não vai para o banco de dados. 
+5. Altera as configurações de acesso ao banco de dados no arquivo **db.sql** para as configurações do seu banco de dados local. 
